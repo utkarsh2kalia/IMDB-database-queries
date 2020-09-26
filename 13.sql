@@ -1,0 +1,1 @@
+select distinct(pp.name) from people pp join stars ss on ss.person_id=pp.id where ss.movie_id in( select s.movie_id from stars s where s.person_id in (select p.id from people p where p.name = "Kevin Bacon" and p.birth=1958)) and pp.name!="Kevin Bacon";

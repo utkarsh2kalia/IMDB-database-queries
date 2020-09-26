@@ -1,0 +1,1 @@
+SELECT p.name from people p where p.id in ( select distinct s.person_id from stars s join movies m on s.movie_id = m.id WHERE m.year = 2004) order by birth asc;
